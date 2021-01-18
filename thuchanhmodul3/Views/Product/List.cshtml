@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_NoneLayout.cshtml";
+}
+
+<h1>Wellcome @ViewBag.userLogined</h1>
+<h2>Product List</h2>
+<a class="btn btn-success" href="~/Product/Create">Create</a>
+<table class="table table-hover">
+    <tr>
+        <td scope="col">Id</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Action</td>
+    </tr>
+    @foreach (var products in ViewBag.products)
+    {
+        <tr>
+            <td scope="row">
+                @products.Id
+            </td>
+            <td>
+                @products.Name
+            </td>
+            <td>
+                @products.Price
+            </td>
+            <td>
+                <a class="btn btn-warning" href="~/Product/Detail?id=@products.Id">Detail</a>
+                <a class=" btn btn-success" href="~/Product/Edit?id=@products.Id">Edit</a>
+                <a class=" btn btn-danger" href="~/Product/Delete?id=@products.Id">Delete</a>
+
+            </td>
+        </tr>
+
+    }
+</table>

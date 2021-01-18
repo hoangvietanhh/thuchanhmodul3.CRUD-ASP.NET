@@ -1,0 +1,25 @@
+﻿@model thuchanhmodul3.Models.Product
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_NoneLayout.cshtml";
+
+}
+
+<h2>Product Detail</h2>
+<table class="table table-hover">
+    <tr>
+        <td scope="col">Id</td>
+        <td scope="col">Name</td>
+        <td scope="col">Price</td>
+    </tr>
+   <tr>
+        <td scope="row">@Model.Id</td>
+        
+        <td scope="row">@Model.Name</td>
+      
+        <td scope="row">@Model.Price</td>
+    </tr>
+  
+
+</table>
+
